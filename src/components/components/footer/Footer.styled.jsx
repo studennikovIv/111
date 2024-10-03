@@ -16,6 +16,7 @@ export const FOOTER_DIV = styled.div`
 `;
 export const FOOTER_TOP_DIV = styled.div`
   display: flex;
+  flex-wrap:wrap;
 `;
 export const LOGO_IMG = styled.img`
   width: 40px;
@@ -23,6 +24,10 @@ export const LOGO_IMG = styled.img`
 `;
 export const LIST_DIV = styled.div`
   margin-left: 100px;
+   @media (max-width: 768px) {
+  margin-left: auto;
+    
+   }
   ul {
     display: flex;
   }
@@ -84,6 +89,11 @@ export const TEXT_DIV = styled.div`
   width: 380px;
   margin-left: 558px;
   margin-top: 50px;
+  @media (max-width: 1500px) {
+  margin-left: 0px;
+
+  }
+
   h4 {
     font-family: Noto Serif;
     font-size: 20px;
@@ -106,15 +116,24 @@ export const FOOTER_BOTTOM_DIV = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-top: 38px;
+    @media (max-width: 768px) {
+      flex-wrap:wrap;
+      gap: 20px;
+    }
 `;
 export const COPIRATE_P = styled.p`
   position: relative;
   :before {
     content: ' \00a9';
 }
+
+
 `;
 export const FORM_DIV = styled.div`
   display: flex;
+    @media (max-width: 768px) {
+    flex-grow:1;
+    }
   input {
     width: 380px;
     height: 62px;
@@ -126,8 +145,12 @@ export const FORM_DIV = styled.div`
       outline: none;
       color: #000;
     }
+       @media (max-width: 768px) {
+       width:100%;
+    }
   }
   button {
+  flex-shrink:0;
     margin-left: 38px;
     background-color: #40c3ba;
     width: 62px;

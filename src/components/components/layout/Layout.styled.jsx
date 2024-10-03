@@ -5,9 +5,16 @@ export const FIXED_DIV = styled.div`
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #fffc;
-  backdrop-filter: blur(10px);
+ 
   z-index: 9999;
+  &::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    z-index:-1;
+     background-color: #fffc;
+  backdrop-filter: blur(10px);
+  }
 `;
 
 export const HEADER_SECTION = styled.section`
@@ -31,6 +38,13 @@ export const MENU_NAV = styled.nav`
   padding: 0 0 0 50px;
   width: 740px;
   height: 100%;
+   @media (max-width: 1024px) {
+   flex-direction:column;
+   gap:20px;
+   padding:0px 15px;
+    margin: 0 auto;
+    width:100%;
+    }
 `;
 
 export const A_DIV = styled.div`
@@ -43,7 +57,10 @@ export const A_DIV = styled.div`
   transition: all 0.5s ease;
 
   &:hover {
-    box-shadow: inset 0 -1px 0 black;
+     @media (min-width: 1024px) {
+      box-shadow: inset 0 -1px 0 black;
+
+    }
     a {
       color: #40c3ba;
     }
@@ -62,6 +79,10 @@ export const A_DIV = styled.div`
     font-weight: 400;
     line-height: 21.6px;
     font-family: Manrope;
+ @media (max-width: 1024px) {
+  font-size:22px;
+    }
+
   }
   img {
     width: 22px;
@@ -75,7 +96,10 @@ export const PHONE_DIV = styled.div`
   justify-content: space-evenly;
   margin-left: auto;
   height: 100%;
-
+   @media (max-width: 1024px) {
+    margin: 15px auto 0 ;
+    
+   }
   p {
     
     font-family: Manrope;
